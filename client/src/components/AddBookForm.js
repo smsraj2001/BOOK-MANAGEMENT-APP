@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// const dotenv = require('dotenv');
-// dotenv.config();
 
 const AddBookForm = () => {
   const [title, setTitle] = useState('');
@@ -14,7 +12,6 @@ const AddBookForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // await axios.post('http://localhost:5000/api/books', { title, author, genre, image });
       await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/books`, { title, author, genre, image });
        // Clear the input fields after successfully adding a book
       setTitle('');
@@ -27,6 +24,7 @@ const AddBookForm = () => {
     }
   };
 
+  // To accept the Book details and UI for the same by inline CSS.
   return (
     <div style={{ textAlign: 'center', maxWidth: '400px', margin: 'auto' }}>
       <h1 style={{ color: 'purple' }}>Add New Book</h1>
