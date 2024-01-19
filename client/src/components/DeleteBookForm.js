@@ -1,4 +1,5 @@
 // client/src/components/DeleteBookForm.js
+
 import React from 'react';
 import axios from 'axios';
 
@@ -6,7 +7,7 @@ import axios from 'axios';
 const DeleteBookForm = ({ bookId, onDelete }) => {
   const handleDelete = async () => {
     try {
-      // await axios.delete(`http://localhost:5000/api/books/${bookId}`);
+
       await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/api/books/${bookId}`);
       onDelete(); // Notify the parent component that deletion is done
     } catch (error) {
