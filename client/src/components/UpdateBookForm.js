@@ -1,8 +1,8 @@
+// client/src/components/UpdateBookForm.js
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-// const dotenv = require('dotenv');
-// dotenv.config();
 
 const UpdateBookForm = ({ bookId, onClose, onUpdate }) => {
   const navigate = useNavigate();
@@ -17,7 +17,6 @@ const UpdateBookForm = ({ bookId, onClose, onUpdate }) => {
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
-        // const response = await axios.get(`http://localhost:5000/api/books/${bookId}`);
         const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/books/${bookId}`);
         setUpdatedBook(response.data);
       } catch (error) {
@@ -31,8 +30,8 @@ const UpdateBookForm = ({ bookId, onClose, onUpdate }) => {
   const handleUpdate = async () => {
     setLoading(true);
 
+    // Handling the update of the book details.
     try {
-      // await axios.put(`http://localhost:5000/api/books/${bookId}`, updatedBook);
       await axios.put(`${process.env.REACT_APP_API_BASE_URL}/api/books/${bookId}`, updatedBook);
       onUpdate();
       navigate('/');
