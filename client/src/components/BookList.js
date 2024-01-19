@@ -27,16 +27,16 @@ const BookList = () => {
     }
   };
 
-  const handleDelete = async (bookId) => {
-    try {
-      // await axios.delete(`http://localhost:5000/api/books/${bookId}`);
-      await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/api/books/${bookId}`);
-      fetchBooks(); // Update the book list after deletion
-      setSelectedBook(null); // Close the update form after deletion
-    } catch (error) {
-      console.error('Error deleting book:', error);
-    }
-  };
+  // const handleDelete = async (bookId) => {
+  //   try {
+  //     // await axios.delete(`http://localhost:5000/api/books/${bookId}`);
+  //     await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/api/books/${bookId}`);
+  //     fetchBooks(); // Update the book list after deletion
+  //     setSelectedBook(null); // Close the update form after deletion
+  //   } catch (error) {
+  //     console.error('Error deleting book:', error);
+  //   }
+  // };
 
   const handleUpdateClick = (book) => {
     setSelectedBook(book);
