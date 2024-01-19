@@ -1,4 +1,6 @@
 /* client/src/Header.css */
+
+/* Added styling for navbar and buttons */
 .navbar {
     background-color: #5395ae;
     padding: 15px 0;
@@ -34,10 +36,6 @@
     font-weight: bold;
     font-size: 1.1rem;
   }
-  
-  /* Additional styles for button, form, etc. can be added here */
-/* client/src/Header.css */
-/* ... existing styles ... */
 
 .delete-button {
     background-color: #e74c3c;
