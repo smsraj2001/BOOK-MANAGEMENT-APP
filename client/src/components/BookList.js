@@ -2,23 +2,20 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import DeleteBookForm from './DeleteBookForm';
+import DeleteBookForm from './DeleteBookForm'; // Import the DeleteBookForm component
 import UpdateBookForm from './UpdateBookForm'; // Import the UpdateBookForm component
 import './BookList.css';
-// const dotenv = require('dotenv');
-// dotenv.config();
 
 const BookList = () => {
   const [books, setBooks] = useState([]);
   const [selectedBook, setSelectedBook] = useState(null);
 
   useEffect(() => {
-    fetchBooks();
+    fetchBooks(); // To fetch other books automatically after deleting.
   }, []);
 
   const fetchBooks = async () => {
     try {
-      //const response = await axios.get('http://localhost:5000/api/books');
       const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/books`);
       setBooks(response.data);
       
@@ -26,17 +23,6 @@ const BookList = () => {
       console.error('Error fetching books:', error);
     }
   };
-
-  // const handleDelete = async (bookId) => {
-  //   try {
-  //     // await axios.delete(`http://localhost:5000/api/books/${bookId}`);
-  //     await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/api/books/${bookId}`);
-  //     fetchBooks(); // Update the book list after deletion
-  //     setSelectedBook(null); // Close the update form after deletion
-  //   } catch (error) {
-  //     console.error('Error deleting book:', error);
-  //   }
-  // };
 
   const handleUpdateClick = (book) => {
     setSelectedBook(book);
@@ -47,6 +33,7 @@ const BookList = () => {
     fetchBooks(); // Update the book list after updating
   };
 
+  // To display the list of books with the help of inline CSS.
   return (
     <div className="book-list" style={{ textAlign: 'center', maxWidth: '800px', margin: 'auto' }}>
       <h1 style={{ color: 'black' }}>Book List</h1>
