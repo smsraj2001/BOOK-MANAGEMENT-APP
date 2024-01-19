@@ -63,8 +63,7 @@ node server.js
 ## Deployment:
 - The app is deployed for ubiquitous access.
 - The server side is deployed on ```RENDER``` 
-- The client side is deployed on ```NETLIFY``` [Click Here](https://65aa4fa06599690bdf85e107--cheery-liger-ef1764.netlify.app/)
-
+- The client side is deployed on ```NETLIFY``` [Click Here](https://65aa777a362a3a078981bab6--cheery-liger-ef1764.netlify.app/)
 
 
 
