@@ -1,4 +1,6 @@
 // client/src/App.js
+
+// Importing all the predefined and implemented components
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BookList from './components/BookList';
@@ -17,7 +19,7 @@ function App() {
         <Route path="/" element={<BookList />} />
         <Route path="/add" element={<AddBookForm />} />
         <Route path="/delete" element={<DeleteBookForm />} />
-        <Route path="/update" component={UpdateBookForm} /> {/* Add a route for UpdateBookForm */}
+        <Route path="/update" component={UpdateBookForm} /> {/* Added a route for Add, Delete, UpdateBookForm */}
       </Routes>
     </Router>
   );
