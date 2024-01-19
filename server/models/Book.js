@@ -1,6 +1,8 @@
 // server/models/Book.js
+
 const mongoose = require('mongoose');
 
+// MongoDB schema
 const bookSchema = new mongoose.Schema({
   title: String,
   author: String,
