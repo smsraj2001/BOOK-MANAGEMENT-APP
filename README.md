@@ -1,5 +1,5 @@
 # BOOK-MANAGEMENT-APP
-This is a simple web app created using MERN Stack used to add, modify or delete books, using a client and server interface with RESTful Api's for routing.
+This is a simple full stack web app developed using MERN Stack used to add, modify or delete books, using a client and server interface with RESTful Api's for routing.
 
 ## Technologies Used
 
