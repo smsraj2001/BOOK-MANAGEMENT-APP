@@ -1,8 +1,9 @@
 /* client/src/App.css or a new CSS file for global styling */
+
 body {
   margin: 0; /* Remove default body margin */
   padding: 0; /* Remove default body padding */
-  background: url('LBW5.jpg')  /* Replace 'your-image-path.jpg' with the path to your image */
+  background: url('LBW5.jpg')  
 }
 
 /* Additional styling for your content, if needed */
@@ -13,4 +14,4 @@ body {
   color: #fff;
 }
 
-/* Rest of your styles... */
+
