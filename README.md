@@ -58,7 +58,7 @@ node server.js
 - We can add title, author, genre and image (A web URL of the image) of the book.
 - The book details can be viewed in the home page.
 - Each book has the option to be deleted or updated.
-- Updating includes modification of any details of the book.
+- Updating includes modification of any details of the book. (Remember to click the ```Cancel``` button after clicking on the ```Update Book``` button to close the edit menu).
 
 ## Deployment:
 - The app is deployed for ubiquitous access.
